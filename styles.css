@@ -1,0 +1,70 @@
+/* Ensure html and body take up the full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main content container */
+.container {
+    flex: 1; /* Allow container to grow and push footer to the bottom */
+    padding-bottom: 60px; /* Space for the footer */
+}
+/* Input Group Styling */
+/* Center align input group */
+.input-group {
+    margin: 1rem auto; /* Center the input group and add space above and below */
+    max-width: 600px; /* Set a maximum width to the input group */
+    display: flex; /* Use flexbox for alignment */
+}
+
+/* Adjust the width of input and button */
+.input-group .form-control {
+    flex: 1; /* Allow input to grow */
+    max-width: 75%; /* Make input slightly narrower */
+    border-radius: 0.25rem; /* Border radius for input field */
+    font-size: 1rem; /* Font size for input field */
+}
+
+.input-group .btn {
+    border-radius: 0.25rem; /* Border radius for button */
+    font-size: 1rem; /* Font size for button */
+    min-width: 5rem; /* Make button slightly narrower */
+}
+
+/* Adjust the width of the todo list */
+#todo-list {
+    margin: 0 auto; /* Center the list horizontally */
+    padding: 0; /* Remove default padding */
+    max-width: 90%; /* Set a maximum width for the list */
+    border-radius: 0.25rem; /* Optional: Add border radius for a rounded look */
+}
+
+/* Make list items have a bit more space */
+.list-group-item {
+    margin: 0.25rem 0; /* Add vertical spacing between list items */
+}
+
+
+/* Include Navbar CSS */
+@import url('navbar.css');
+
+/* Footer Styling */
+footer {
+    position: relative; /* Default positioning */
+    background-color: #343a40; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    footer {
+        padding: 10px;
+        font-size: 12px;
+    }
+}
