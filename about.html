@@ -5,40 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="about.css">
 </head>
 <body>
-    <!-- Include Navbar -->
-    <div id="navbar-placeholder"></div>
+    <div id="navbar-container"></div>
 
-    <!-- About Page Content -->
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">About Us</h1>
-        <p>This is the about page content.</p>
+    <!-- Main content -->
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to To-Do List, your ultimate task management tool. Our mission is to help you stay organized and productive by providing a simple yet effective to-do list application.</p>
+        <p>At To-Do List, we believe in the power of organization. Our application is designed to be user-friendly, allowing you to easily add, edit, and remove tasks as needed. Whether you're managing your daily errands or tracking long-term projects, our tool is here to assist you in achieving your goals.</p>
+        <p>Our team is dedicated to continually improving our application to meet your needs. We welcome your feedback and suggestions to make To-Do List even better. Thank you for choosing us to help you stay on top of your tasks!</p>
     </div>
 
     <!-- Footer -->
-    <footer>
-        <p class="mb-0">© 2024 To-Do List. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+        <p>&copy; 2024 To-Do List. All rights reserved.</p>
+    </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Include Navbar Script -->
+    <!-- JavaScript to load navbar -->
     <script>
-        // Function to load navbar
-        function loadNavbar() {
+        document.addEventListener("DOMContentLoaded", function() {
             fetch('navbar.html')
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById('navbar-placeholder').innerHTML = data;
+                    document.getElementById('navbar-container').innerHTML = data;
                 });
-        }
-
-        // Load navbar on page load
-        loadNavbar();
+        });
     </script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
